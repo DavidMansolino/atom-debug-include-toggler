@@ -1,7 +1,7 @@
 {
   "name": "Debug-Include-Toogler",
   "main": "./lib/debug-include-toogler",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This package simply allows the user to add/remove a debugging include at the beginning of the file.",
   "keywords": [],
   "activationCommands": {
