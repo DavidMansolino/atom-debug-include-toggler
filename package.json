@@ -1,10 +1,9 @@
 {
   "name": "qt-debug-include-toggler",
   "main": "./lib/qt-debug-include-toggler",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "This package simply allows the user to add/remove a Qt debug include at the beginning of the file.",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
     "atom-workspace": "qt-debug-include-toggler:toggle"
   },
@@ -13,6 +12,5 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
