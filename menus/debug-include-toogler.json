@@ -2,8 +2,8 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Toggle Debug Include Toogler",
-        "command": "debug-include-toogler:toggle"
+        "label": "Toggle Debug Include Toggler",
+        "command": "qt-debug-include-toggler:toggle"
       }
     ]
   },
@@ -12,11 +12,11 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "Debug Include Toogler",
+          "label": "Debug Include Toggler",
           "submenu": [
             {
               "label": "Toggle",
-              "command": "debug-include-toogler:toggle"
+              "command": "qt-debug-include-toggler:toggle"
             }
           ]
         }

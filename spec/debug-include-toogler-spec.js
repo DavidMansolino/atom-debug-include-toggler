@@ -15,7 +15,7 @@ describe('DebugIncludeToogler', () => {
     activationPromise = atom.packages.activatePackage('debug-include-toogler');
   });
 
-  describe('when the debug-include-toogler:toggle event is triggered', () => {
+  describe('when the qt-debug-include-toggler:toggle event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
@@ -23,7 +23,7 @@ describe('DebugIncludeToogler', () => {
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'debug-include-toogler:toggle');
+      atom.commands.dispatch(workspaceElement, 'qt-debug-include-toggler:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -37,7 +37,7 @@ describe('DebugIncludeToogler', () => {
 
         let debugIncludeTooglerPanel = atom.workspace.panelForItem(debugIncludeTooglerElement);
         expect(debugIncludeTooglerPanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'debug-include-toogler:toggle');
+        atom.commands.dispatch(workspaceElement, 'qt-debug-include-toggler:toggle');
         expect(debugIncludeTooglerPanel.isVisible()).toBe(false);
       });
     });
@@ -55,7 +55,7 @@ describe('DebugIncludeToogler', () => {
 
       // This is an activation event, triggering it causes the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'debug-include-toogler:toggle');
+      atom.commands.dispatch(workspaceElement, 'qt-debug-include-toggler:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -65,7 +65,7 @@ describe('DebugIncludeToogler', () => {
         // Now we can test for view visibility
         let debugIncludeTooglerElement = workspaceElement.querySelector('.debug-include-toogler');
         expect(debugIncludeTooglerElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'debug-include-toogler:toggle');
+        atom.commands.dispatch(workspaceElement, 'qt-debug-include-toggler:toggle');
         expect(debugIncludeTooglerElement).not.toBeVisible();
       });
     });
