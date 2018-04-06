@@ -1,25 +1,25 @@
 'use babel';
 
-import DebugIncludeToogler from '../lib/debug-include-toogler';
+import QtDebugIncludeToggler from '../lib/qt-debug-include-toggler';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
 // To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
-describe('DebugIncludeToogler', () => {
+describe('QtDebugIncludeToggler', () => {
   let workspaceElement, activationPromise;
 
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
-    activationPromise = atom.packages.activatePackage('debug-include-toogler');
+    activationPromise = atom.packages.activatePackage('qt-debug-include-toggler');
   });
 
   describe('when the qt-debug-include-toggler:toggle event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
-      expect(workspaceElement.querySelector('.debug-include-toogler')).not.toExist();
+      expect(workspaceElement.querySelector('.qt-debug-include-toggler')).not.toExist();
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
@@ -30,15 +30,15 @@ describe('DebugIncludeToogler', () => {
       });
 
       runs(() => {
-        expect(workspaceElement.querySelector('.debug-include-toogler')).toExist();
+        expect(workspaceElement.querySelector('.qt-debug-include-toggler')).toExist();
 
-        let debugIncludeTooglerElement = workspaceElement.querySelector('.debug-include-toogler');
-        expect(debugIncludeTooglerElement).toExist();
+        let qtDebugIncludeTogglerElement = workspaceElement.querySelector('.qt-debug-include-toggler');
+        expect(qtDebugIncludeTogglerElement).toExist();
 
-        let debugIncludeTooglerPanel = atom.workspace.panelForItem(debugIncludeTooglerElement);
-        expect(debugIncludeTooglerPanel.isVisible()).toBe(true);
+        let qtDebugIncludeTogglerPanel = atom.workspace.panelForItem(qtDebugIncludeTogglerElement);
+        expect(qtDebugIncludeTogglerPanel.isVisible()).toBe(true);
         atom.commands.dispatch(workspaceElement, 'qt-debug-include-toggler:toggle');
-        expect(debugIncludeTooglerPanel.isVisible()).toBe(false);
+        expect(qtDebugIncludeTogglerPanel.isVisible()).toBe(false);
       });
     });
 
@@ -51,7 +51,7 @@ describe('DebugIncludeToogler', () => {
       // workspaceElement to the DOM are generally slower than those off DOM.
       jasmine.attachToDOM(workspaceElement);
 
-      expect(workspaceElement.querySelector('.debug-include-toogler')).not.toExist();
+      expect(workspaceElement.querySelector('.qt-debug-include-toggler')).not.toExist();
 
       // This is an activation event, triggering it causes the package to be
       // activated.
@@ -63,10 +63,10 @@ describe('DebugIncludeToogler', () => {
 
       runs(() => {
         // Now we can test for view visibility
-        let debugIncludeTooglerElement = workspaceElement.querySelector('.debug-include-toogler');
-        expect(debugIncludeTooglerElement).toBeVisible();
+        let qtDebugIncludeTogglerElement = workspaceElement.querySelector('.qt-debug-include-toggler');
+        expect(qtDebugIncludeTogglerElement).toBeVisible();
         atom.commands.dispatch(workspaceElement, 'qt-debug-include-toggler:toggle');
-        expect(debugIncludeTooglerElement).not.toBeVisible();
+        expect(qtDebugIncludeTogglerElement).not.toBeVisible();
       });
     });
   });
