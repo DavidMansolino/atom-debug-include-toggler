@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle Debug Include Toogler",
+        "command": "debug-include-toogler:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "Debug Include Toogler",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "debug-include-toogler:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
