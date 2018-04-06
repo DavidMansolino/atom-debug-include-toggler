@@ -5,7 +5,7 @@
   "description": "This package simply allows the user to add/remove a Qt debug include at the beginning of the file.",
   "keywords": [],
   "activationCommands": {
-    "atom-workspace": "debug-include-toogler:toggle"
+    "atom-workspace": "qt-debug-include-toggler:toggle"
   },
   "repository": "https://github.com/DavidMansolino/atom-debug-include-toggler",
   "license": "MIT",
