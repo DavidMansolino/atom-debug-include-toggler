@@ -1,0 +1,5 @@
+{
+  "atom-workspace": {
+    "ctrl-alt-i": "qt-debug-include-toggler:toggle"
+  }
+}
